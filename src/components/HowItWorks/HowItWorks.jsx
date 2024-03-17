@@ -22,7 +22,11 @@ const HowItWorks = () => {
       duration: 2,
     });
 
-    animateWithGsap(".g_fadeIn", {
+    gsap.to(".g_fadeIn", {
+      scrollTrigger: {
+        trigger: ".g_fadeIn",
+        start: "20% bottom",
+      },
       opacity: 1,
       y: 0,
       duration: 1,
