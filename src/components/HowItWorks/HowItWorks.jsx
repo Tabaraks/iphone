@@ -26,7 +26,7 @@ const HowItWorks = () => {
       scrollTrigger: {
         trigger: ".g_fadeIn",
         toggleActions: "restart reverse restart reverse",
-        start: "20% bottom",
+        start: "50% bottom",
       },
       opacity: 1,
       y: 0,
