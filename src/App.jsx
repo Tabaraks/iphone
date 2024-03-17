@@ -9,7 +9,7 @@ import Footer from "./components/Footer";
 
 const App = () => {
   return (
-    <main className="bg-black overflow-scroll">
+    <main className="bg-black overflow-y-scroll overflow-x-hidden">
       <Navbar />
       <Hero />
       <Highlights />
