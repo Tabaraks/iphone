@@ -25,6 +25,7 @@ const HowItWorks = () => {
     gsap.to(".g_fadeIn", {
       scrollTrigger: {
         trigger: ".g_fadeIn",
+        toggleActions: "restart reverse restart reverse",
         start: "20% top",
       },
       opacity: 1,
