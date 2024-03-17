@@ -24,7 +24,7 @@ const Feature = () => {
       {
         scale: 1,
         opacity: 1,
-        ease: "power1",
+        ease: "power1.inOut",
       },
       { scrub: 5.5 }
     );
