@@ -20,7 +20,7 @@ const ModelView = ({
       id={gsapType}
       className={`size-full absolute ${index === 2 ? "right-[-100%]" : ""}`}
     >
-      <ambientLight intensity={.5} />
+      <ambientLight intensity={0.5} />
       <PerspectiveCamera makeDefault position={[0, 0, 4]} />
       <Lights />
       <OrbitControls
@@ -30,7 +30,6 @@ const ModelView = ({
         enablePan={false}
         rotateSpeed={0.4}
         target={new Three.Vector3(0, 0, 0)}
-        onEnd={() => setRotationState(controlRef.current.getAzimuthalAngle())}
       />
       <group
         ref={groupRef}

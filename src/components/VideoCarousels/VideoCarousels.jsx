@@ -3,6 +3,9 @@ import { highlightsSlides } from "../../constants";
 import gsap from "gsap";
 import { pauseImg, playImg, replayImg } from "../../utils";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/all";
+
+gsap.registerPlugin(ScrollTrigger);
 
 const VideoCarousels = () => {
   const videoRef = useRef([]);
@@ -156,6 +159,7 @@ const VideoCarousels = () => {
             <div className="video-carousel_container">
               <div className="flex-center size-full overflow-hidden rounded-3xl bg-black">
                 <video
+                  id="video"
                   className={`${highlight.id === 2 && "pointer-events-none translate-x-44"}`}
                   onEnded={() =>
                     index !== 3
@@ -172,7 +176,6 @@ const VideoCarousels = () => {
                       isPlaying: true,
                     }));
                   }}
-                  id="video"
                   preload="auto"
                   muted
                   playsInline={true}
